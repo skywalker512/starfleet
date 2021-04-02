@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": ["esnext"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@starfleet/nest-command": ["packages/nest-command/lib/index.ts"]
+    },
+    "strict": true
+  },
+  "exclude": ["tmp"]
+}

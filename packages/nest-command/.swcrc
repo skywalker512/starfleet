@@ -1,0 +1,19 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "decorators": true
+    },
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": true
+    },
+    "externalHelpers": false,
+    "target": "es2020",
+    "loose": true,
+    "keepClassNames": true
+  },
+  "module": {
+    "type": "commonjs"
+  }
+}

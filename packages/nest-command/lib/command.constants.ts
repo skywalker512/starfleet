@@ -1,0 +1,2 @@
+export const COMMAND_MODULE_OPTIONS = Symbol('COMMAND_MODULE_OPTIONS');
+export const COMMAND_SERVER = Symbol('COMMAND_SERVER');

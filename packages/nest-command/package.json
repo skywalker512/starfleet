@@ -1,0 +1,43 @@
+{
+  "name": "@starfleet/nest-command",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/nest-command.js",
+  "types": "dist/nest-command.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pnpm run build:js & pnpm run build:dts",
+    "build:js": "rm -r dist && swc lib -d tmp/lib && swc e2e -d tmp/e2e && node scripts/build.mjs && rm -r tmp",
+    "build:dts": "tsc --build tsconfig.lib.json && api-extractor run --local --verbose && rm -rf ./dist/lib",
+    "dev": "swc lib -d tmp/lib -w & swc e2e -d tmp/e2e -w",
+    "run": "node tmp/e2e/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "enquirer": "^2.3.6",
+    "yargs": "^16.2.0",
+    "@types/yargs": "^16.0.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^7.6.15",
+    "@nestjs/core": "^7.6.15"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^7.6.15",
+    "@nestjs/core": "^7.6.15",
+    "@swc/cli": "^0.1.36",
+    "@swc/core": "^1.2.51",
+    "chokidar": "^3.5.1",
+    "esbuild": "^0.11.2",
+    "rxjs": "^6.6.7",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.2.3",
+    "reflect-metadata": "^0.1.13",
+    "esbuild-node-externals": "^1.0.3",
+    "@microsoft/api-extractor": "^7.13.2",
+    "@types/node": "^14.14.37"
+  }
+}
