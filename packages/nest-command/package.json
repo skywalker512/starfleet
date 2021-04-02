@@ -10,7 +10,7 @@
     "build": "pnpm run build:js & pnpm run build:dts",
     "build:js": "rm -r dist && swc lib -d tmp/lib && swc e2e -d tmp/e2e && node scripts/build.mjs && rm -r tmp",
     "build:dts": "tsc --build tsconfig.lib.json && api-extractor run --local --verbose && rm -rf ./dist/lib",
-    "dev": "swc lib -d tmp/lib -w & swc e2e -d tmp/e2e -w",
+    "dev": "swc lib -d tmp/lib -w & sleep 4 && node scripts/watch.mjs",
     "run": "node tmp/e2e/index.js"
   },
   "author": "",
