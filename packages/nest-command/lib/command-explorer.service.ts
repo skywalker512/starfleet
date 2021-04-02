@@ -63,25 +63,34 @@ export class CommandExplorerService {
           );
 
         const handler: NonNullable<CommandModule['handler']> = async (args) => {
-          const params = this.generateCommandHandlerParams(
+          const [params, defaultParams] = this.generateCommandHandlerParams(
             command.metadata.params as CommandParamMetadata<
               CommandOptionsOption | CommandPositionalOption
             >,
             args
           );
 
-          const [promptList, promptListIndex] = this.generatePromptParams(
+          const promptList = this.generatePromptParams(
             command.metadata.params as CommandParamMetadata<PromptOptions>
           );
 
-          promptListIndex.forEach((index) => {
-            params[index] && delete promptList[index];
+          let EffectivePromptListIndex: number[] = [],
+            EffectivePromptList: PromptOptions[] = [];
+
+          promptList.forEach((option, index) => {
+            if (
+              params[index] == undefined ||
+              params[index] === defaultParams[index]
+            ) {
+              EffectivePromptList.push(option);
+              EffectivePromptListIndex.push(index);
+            }
           });
 
-          const prompts = await prompt(promptList);
+          const prompts = await prompt(EffectivePromptList);
 
           Object.values(prompts).forEach((prompt, index) => {
-            params[promptListIndex[index]] = prompt;
+            params[EffectivePromptListIndex[index]] = prompt;
           });
 
           this.commandService.run();
@@ -116,11 +125,7 @@ export class CommandExplorerService {
 
   protected iteratorParamMetadata<O>(
     params: CommandParamMetadata<O>,
-    callback: (
-      item: CommandParamMetadataItem<O>,
-      key: string,
-      index: number
-    ) => void
+    callback: (item: CommandParamMetadataItem<O>, key: string) => void
   ) {
     if (!params) {
       return;
@@ -133,7 +138,7 @@ export class CommandExplorerService {
         return;
       }
 
-      param.forEach((metadata, index) => callback(metadata, key, index));
+      param.forEach((metadata) => callback(metadata, key));
     });
   }
 
@@ -144,16 +149,19 @@ export class CommandExplorerService {
     argv: Arguments
   ) {
     const list: (Arguments | unknown)[] = [];
+    const defaultValueList: any[] = [];
 
     this.iteratorParamMetadata(params, (item, key) => {
       switch (key) {
         case CommandParamTypes.OPTION:
-          list[item.index] = argv[(item.option as CommandOptionsOption).name!];
+          list[item.index] = argv[(item.option as CommandOptionsOption).name];
+          defaultValueList[item.index] = item.option.default;
           break;
 
         case CommandParamTypes.POSITIONAL:
           list[item.index] =
-            argv[(item.option as CommandPositionalOption).name!];
+            argv[(item.option as CommandPositionalOption).name];
+          defaultValueList[item.index] = item.option.default;
           break;
 
         case CommandParamTypes.ARGV:
@@ -165,7 +173,7 @@ export class CommandExplorerService {
       }
     });
 
-    return list;
+    return [list, defaultValueList] as const;
   }
 
   private generateCommandBuilder(
@@ -200,12 +208,10 @@ export class CommandExplorerService {
 
   private generatePromptParams(params: CommandParamMetadata<PromptOptions>) {
     const list: PromptOptions[] = [];
-    const listIndex: number[] = [];
-    this.iteratorParamMetadata<PromptOptions>(params, (item, key, index) => {
+    this.iteratorParamMetadata<PromptOptions>(params, (item, key) => {
       switch (key) {
         case CommandParamTypes.PROMPT:
-          listIndex[index] = item.index;
-          list[index] = item.option;
+          list[item.index] = item.option;
           break;
 
         default:
@@ -213,6 +219,6 @@ export class CommandExplorerService {
       }
     });
 
-    return [list, listIndex] as const;
+    return list;
   }
 }
