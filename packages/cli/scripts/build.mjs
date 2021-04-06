@@ -2,7 +2,7 @@ import esbuild from 'esbuild';
 
 (async () => {
   await esbuild.build({
-    entryPoints: ['tmp/index.js'],
+    entryPoints: ['dist/src/index.js'],
     bundle: true,
     platform: 'node',
     outfile: 'dist/starfleet.js',

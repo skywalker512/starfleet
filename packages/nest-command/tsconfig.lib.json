@@ -4,8 +4,6 @@
     "rootDir": ".",
     "outDir": "./dist",
     "declaration": true,
-    "emitDeclarationOnly": true,
   },
-  "exclude": ["e2e/**/*.ts"],
   "include": ["lib/**/*.ts"]
 }

@@ -1,4 +1,4 @@
-import type Enquirer from 'enquirer';
+import Enquirer = require('enquirer');
 
 export interface BasePromptOptions {
   name: string | (() => string);

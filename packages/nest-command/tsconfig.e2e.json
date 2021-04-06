@@ -1,9 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "declaration": true,
-    "outDir": "./tmp/e2e"
-  },
-  "include": ["e2e/**/*.ts"],
-  "exclude": ["lib/**/*.ts"]
-}

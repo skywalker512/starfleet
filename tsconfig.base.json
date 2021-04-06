@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "rootDir": ".",
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -13,11 +13,13 @@
     "lib": ["esnext"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@starfleet/nest-command": ["packages/nest-command/lib/index.ts"]
-    },
-    "strict": true
+    "composite": true,
+    "incremental": true,
+    "strict": true,
+    "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ]
   },
   "exclude": ["tmp"]
 }

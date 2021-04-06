@@ -2,34 +2,26 @@ importers:
   .:
     devDependencies:
       prettier: 2.2.1
+      ttypescript: 1.5.12_typescript@4.2.3
       typescript: 4.2.3
     specifiers:
       prettier: ^2.2.1
+      ttypescript: ^1.5.12
       typescript: ^4.2.3
   packages/cli:
     devDependencies:
       '@nestjs/common': 7.6.15
       '@nestjs/core': 7.6.15_@nestjs+common@7.6.15
       '@starfleet/nest-command': link:../nest-command
-      '@swc-node/register': 1.0.5
-      '@swc/cli': 0.1.36_@swc+core@1.2.51+chokidar@3.5.1
-      '@swc/core': 1.2.51
-      chokidar: 3.5.1
       esbuild: 0.11.2
       esbuild-node-externals: 1.0.3_esbuild@0.11.2
-      tsconfig-paths: 3.9.0
       tslib: 2.1.0
     specifiers:
       '@nestjs/common': ^7.6.15
       '@nestjs/core': ^7.6.15
       '@starfleet/nest-command': workspace:*
-      '@swc-node/register': ^1.0.5
-      '@swc/cli': ^0.1.36
-      '@swc/core': ^1.2.51
-      chokidar: ^3.5.1
       esbuild: ^0.11.2
       esbuild-node-externals: ^1.0.3
-      tsconfig-paths: ^3.9.0
       tslib: ^2.1.0
   packages/nest-command:
     dependencies:
@@ -40,32 +32,24 @@ importers:
       '@microsoft/api-extractor': 7.13.2
       '@nestjs/common': 7.6.15_8e6d4b7501d9d25f42cbf34563d4f5bc
       '@nestjs/core': 7.6.15_2ef5148cf119d2e6a2825daac1d64a18
-      '@swc/cli': 0.1.36_@swc+core@1.2.51+chokidar@3.5.1
-      '@swc/core': 1.2.51
       '@types/node': 14.14.37
-      chokidar: 3.5.1
       esbuild: 0.11.3
       esbuild-node-externals: 1.0.3_esbuild@0.11.3
       reflect-metadata: 0.1.13
       rxjs: 6.6.7
-      ts-node: 9.1.1_typescript@4.2.3
       tslib: 2.1.0
       typescript: 4.2.3
     specifiers:
       '@microsoft/api-extractor': ^7.13.2
       '@nestjs/common': ^7.6.15
       '@nestjs/core': ^7.6.15
-      '@swc/cli': ^0.1.36
-      '@swc/core': ^1.2.51
       '@types/node': ^14.14.37
       '@types/yargs': ^16.0.1
-      chokidar: ^3.5.1
       enquirer: ^2.3.6
       esbuild: ^0.11.2
       esbuild-node-externals: ^1.0.3
       reflect-metadata: ^0.1.13
       rxjs: ^6.6.7
-      ts-node: ^9.1.1
       tslib: ^2.1.0
       typescript: ^4.2.3
       yargs: ^16.2.0
@@ -102,11 +86,6 @@ packages:
     resolution:
       integrity: sha1-MHKONOvJA1HdOv9OGNA47tLD4Jg=
       tarball: '@microsoft/tsdoc/download/@microsoft/tsdoc-0.12.24.tgz'
-  /@napi-rs/triples/1.0.2:
-    dev: true
-    resolution:
-      integrity: sha1-LOTGp4VoNYdyAI9WTuUAkJPSChk=
-      tarball: '@napi-rs/triples/download/@napi-rs/triples-1.0.2.tgz'
   /@nestjs/common/7.6.15:
     dependencies:
       axios: 0.21.1
@@ -215,14 +194,6 @@ packages:
     resolution:
       integrity: sha1-38xaeATBDQf4Hd5RSAS0hLkJ0Io=
       tarball: '@nestjs/core/download/@nestjs/core-7.6.15.tgz'
-  /@node-rs/helper/1.1.0:
-    dependencies:
-      '@napi-rs/triples': 1.0.2
-      tslib: 2.1.0
-    dev: true
-    resolution:
-      integrity: sha1-T8u+uuO4GTLR/z5DHHzTiGtQR0I=
-      tarball: '@node-rs/helper/download/@node-rs/helper-1.1.0.tgz'
   /@nuxtjs/opencollective/0.3.2:
     dependencies:
       chalk: 4.1.0
@@ -269,157 +240,11 @@ packages:
     resolution:
       integrity: sha1-Oqd89UTFcb4yBvwry6IMeglu0lQ=
       tarball: '@rushstack/ts-command-line/download/@rushstack/ts-command-line-4.7.8.tgz'
-  /@swc-node/core/1.3.0:
-    dependencies:
-      '@swc/core': 1.2.51
-    dev: true
-    engines:
-      node: '>= 10'
-    resolution:
-      integrity: sha1-MmCYq84/QrvKYyxXA1mc0f76XNs=
-      tarball: '@swc-node/core/download/@swc-node/core-1.3.0.tgz'
-  /@swc-node/register/1.0.5:
-    dependencies:
-      '@swc-node/core': 1.3.0
-      '@swc-node/sourcemap-support': 0.1.8
-      chalk: 4.1.0
-      debug: 4.3.1
-      pirates: 4.0.1
-    dev: true
-    resolution:
-      integrity: sha1-Tl8+b8Tz4rBWhRWv2uLaUaZ+3M8=
-      tarball: '@swc-node/register/download/@swc-node/register-1.0.5.tgz'
-  /@swc-node/sourcemap-support/0.1.8:
-    dependencies:
-      source-map-support: 0.5.19
-    dev: true
-    resolution:
-      integrity: sha1-jPdBda5eM3RhIBHn51wDY3AZ20w=
-      tarball: '@swc-node/sourcemap-support/download/@swc-node/sourcemap-support-0.1.8.tgz'
-  /@swc/cli/0.1.36_@swc+core@1.2.51+chokidar@3.5.1:
-    dependencies:
-      '@swc/core': 1.2.51
-      chokidar: 3.5.1
-      commander: 7.2.0
-      convert-source-map: 1.7.0
-      glob: 7.1.6
-      lodash: 4.17.21
-      slash: 3.0.0
-      source-map: 0.7.3
-    dev: true
-    engines:
-      node: '>= 12.13'
-    hasBin: true
-    peerDependencies:
-      '@swc/core': ^1.2.4
-      chokidar: ^3.0.0
-    peerDependenciesMeta:
-      chokidar:
-        optional: true
-    resolution:
-      integrity: sha1-4RLoM/eN8EYfQZmaQ1YKyV40rOE=
-      tarball: '@swc/cli/download/@swc/cli-0.1.36.tgz'
-  /@swc/core-android-arm64/1.2.51:
-    dev: true
-    engines:
-      node: '>=10'
-    optional: true
-    resolution:
-      integrity: sha1-ekDy0sYtcRErZIFZxBy5s5s9phk=
-      tarball: '@swc/core-android-arm64/download/@swc/core-android-arm64-1.2.51.tgz'
-  /@swc/core-darwin-arm64/1.2.51:
-    dev: true
-    engines:
-      node: '>=10'
-    optional: true
-    resolution:
-      integrity: sha1-vl64uQFDBeEsCVHnVn+XdcTSlx8=
-      tarball: '@swc/core-darwin-arm64/download/@swc/core-darwin-arm64-1.2.51.tgz'
-  /@swc/core-darwin-x64/1.2.51:
-    dev: true
-    engines:
-      node: '>=10'
-    optional: true
-    resolution:
-      integrity: sha1-xDknYRRKp23LCTfRSQUsAbuW1VY=
-      tarball: '@swc/core-darwin-x64/download/@swc/core-darwin-x64-1.2.51.tgz'
-  /@swc/core-linux-arm-gnueabihf/1.2.51:
-    dev: true
-    engines:
-      node: '>=10'
-    optional: true
-    resolution:
-      integrity: sha1-dONZMZrWR9pInZUp7ddyCx3ipLo=
-      tarball: '@swc/core-linux-arm-gnueabihf/download/@swc/core-linux-arm-gnueabihf-1.2.51.tgz'
-  /@swc/core-linux-arm64-gnu/1.2.51:
-    dev: true
-    engines:
-      node: '>=10'
-    optional: true
-    resolution:
-      integrity: sha1-1kL5HZpctThir1OzM3GCgSTfc/8=
-      tarball: '@swc/core-linux-arm64-gnu/download/@swc/core-linux-arm64-gnu-1.2.51.tgz'
-  /@swc/core-linux-x64-gnu/1.2.51:
-    dev: true
-    engines:
-      node: '>=10'
-    optional: true
-    resolution:
-      integrity: sha1-3w4URhc/LeLSVAjTgpjmNB/EBvs=
-      tarball: '@swc/core-linux-x64-gnu/download/@swc/core-linux-x64-gnu-1.2.51.tgz'
-  /@swc/core-linux-x64-musl/1.2.51:
-    dev: true
-    engines:
-      node: '>=10'
-    optional: true
-    resolution:
-      integrity: sha1-rOGVa4azbBn/Yxyfs+VpMEQrAqg=
-      tarball: '@swc/core-linux-x64-musl/download/@swc/core-linux-x64-musl-1.2.51.tgz'
-  /@swc/core-win32-ia32-msvc/1.2.51:
-    dev: true
-    engines:
-      node: '>=10'
-    optional: true
-    resolution:
-      integrity: sha1-4pfyYWtWj0a7iPEIX9ZPCiF9zUQ=
-      tarball: '@swc/core-win32-ia32-msvc/download/@swc/core-win32-ia32-msvc-1.2.51.tgz'
-  /@swc/core-win32-x64-msvc/1.2.51:
-    dev: true
-    engines:
-      node: '>=10'
-    optional: true
-    resolution:
-      integrity: sha1-BFfciZVVc1F2ralasbSaD9VPHoo=
-      tarball: '@swc/core-win32-x64-msvc/download/@swc/core-win32-x64-msvc-1.2.51.tgz'
-  /@swc/core/1.2.51:
-    dependencies:
-      '@node-rs/helper': 1.1.0
-    dev: true
-    engines:
-      node: '>=10'
-    optionalDependencies:
-      '@swc/core-android-arm64': 1.2.51
-      '@swc/core-darwin-arm64': 1.2.51
-      '@swc/core-darwin-x64': 1.2.51
-      '@swc/core-linux-arm-gnueabihf': 1.2.51
-      '@swc/core-linux-arm64-gnu': 1.2.51
-      '@swc/core-linux-x64-gnu': 1.2.51
-      '@swc/core-linux-x64-musl': 1.2.51
-      '@swc/core-win32-ia32-msvc': 1.2.51
-      '@swc/core-win32-x64-msvc': 1.2.51
-    resolution:
-      integrity: sha1-dv4vbUQyrJv3eDSTNuTKCNyytz4=
-      tarball: '@swc/core/download/@swc/core-1.2.51.tgz'
   /@types/argparse/1.0.38:
     dev: true
     resolution:
       integrity: sha1-qB/YYG1IH4c6OADG665PHXaKVqk=
       tarball: '@types/argparse/download/@types/argparse-1.0.38.tgz'
-  /@types/json5/0.0.29:
-    dev: true
-    resolution:
-      integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
-      tarball: '@types/json5/download/@types/json5-0.0.29.tgz'
   /@types/node/10.17.13:
     dev: true
     resolution:
@@ -464,21 +289,6 @@ packages:
     resolution:
       integrity: sha1-7dgDYornHATIWuegkG7a00tkiTc=
       tarball: ansi-styles/download/ansi-styles-4.3.0.tgz?cache=0&sync_timestamp=1617175740539&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fansi-styles%2Fdownload%2Fansi-styles-4.3.0.tgz
-  /anymatch/3.1.1:
-    dependencies:
-      normalize-path: 3.0.0
-      picomatch: 2.2.2
-    dev: true
-    engines:
-      node: '>= 8'
-    resolution:
-      integrity: sha1-xV7PAhheJGklk5kxDBc84xIzsUI=
-      tarball: anymatch/download/anymatch-3.1.1.tgz
-  /arg/4.1.3:
-    dev: true
-    resolution:
-      integrity: sha1-Jp/HrVuOQstjyJbVZmAXJhwUQIk=
-      tarball: arg/download/arg-4.1.3.tgz
   /argparse/1.0.10:
     dependencies:
       sprintf-js: 1.0.3
@@ -493,40 +303,6 @@ packages:
     resolution:
       integrity: sha1-IlY0gZYvTWvemnbVFu8OXTwJsrg=
       tarball: axios/download/axios-0.21.1.tgz
-  /balanced-match/1.0.0:
-    dev: true
-    resolution:
-      integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
-      tarball: balanced-match/download/balanced-match-1.0.0.tgz
-  /binary-extensions/2.2.0:
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=
-      tarball: binary-extensions/download/binary-extensions-2.2.0.tgz
-  /brace-expansion/1.1.11:
-    dependencies:
-      balanced-match: 1.0.0
-      concat-map: 0.0.1
-    dev: true
-    resolution:
-      integrity: sha1-PH/L9SnYcibz0vUrlm/1Jx60Qd0=
-      tarball: brace-expansion/download/brace-expansion-1.1.11.tgz
-  /braces/3.0.2:
-    dependencies:
-      fill-range: 7.0.1
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha1-NFThpGLujVmeI23zNs2epPiv4Qc=
-      tarball: braces/download/braces-3.0.2.tgz
-  /buffer-from/1.1.1:
-    dev: true
-    resolution:
-      integrity: sha1-MnE7wCj3XAL9txDXx7zsHyxgcO8=
-      tarball: buffer-from/download/buffer-from-1.1.1.tgz
   /chalk/4.1.0:
     dependencies:
       ansi-styles: 4.3.0
@@ -537,23 +313,6 @@ packages:
     resolution:
       integrity: sha1-ThSHCmGNni7dl92DRf2dncMVZGo=
       tarball: chalk/download/chalk-4.1.0.tgz
-  /chokidar/3.5.1:
-    dependencies:
-      anymatch: 3.1.1
-      braces: 3.0.2
-      glob-parent: 5.1.2
-      is-binary-path: 2.1.0
-      is-glob: 4.0.1
-      normalize-path: 3.0.0
-      readdirp: 3.5.0
-    dev: true
-    engines:
-      node: '>= 8.10.0'
-    optionalDependencies:
-      fsevents: 2.3.2
-    resolution:
-      integrity: sha1-7pznu+vSt59J8wR5nVRo4x4U5oo=
-      tarball: chokidar/download/chokidar-3.5.1.tgz
   /cliui/7.0.4:
     dependencies:
       string-width: 4.2.2
@@ -588,51 +347,11 @@ packages:
     resolution:
       integrity: sha1-/UhehMA+tIgcIHIrpIA16FMa6zM=
       tarball: commander/download/commander-2.20.3.tgz
-  /commander/7.2.0:
-    dev: true
-    engines:
-      node: '>= 10'
-    resolution:
-      integrity: sha1-o2y1fQtQHOEI5NIFWaFQo5HZerc=
-      tarball: commander/download/commander-7.2.0.tgz
-  /concat-map/0.0.1:
-    dev: true
-    resolution:
-      integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
-      tarball: concat-map/download/concat-map-0.0.1.tgz
   /consola/2.15.3:
     dev: true
     resolution:
       integrity: sha1-LhH5jWpL5x/3LgvfB70j4Sy2FVA=
       tarball: consola/download/consola-2.15.3.tgz
-  /convert-source-map/1.7.0:
-    dependencies:
-      safe-buffer: 5.1.2
-    dev: true
-    resolution:
-      integrity: sha1-F6LLiC1/d9NJBYXizmxSRCSjpEI=
-      tarball: convert-source-map/download/convert-source-map-1.7.0.tgz
-  /create-require/1.1.1:
-    dev: true
-    resolution:
-      integrity: sha1-wdfo8eX2z8n/ZfnNNS03NIdWwzM=
-      tarball: create-require/download/create-require-1.1.1.tgz
-  /debug/4.3.1:
-    dependencies:
-      ms: 2.1.2
-    dev: true
-    engines:
-      node: '>=6.0'
-    resolution:
-      integrity: sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
-      tarball: debug/download/debug-4.3.1.tgz
-  /diff/4.0.2:
-    dev: true
-    engines:
-      node: '>=0.3.1'
-    resolution:
-      integrity: sha1-YPOuy4nV+uUgwRqhnvwruYKq3n0=
-      tarball: diff/download/diff-4.0.2.tgz
   /emoji-regex/8.0.0:
     dev: false
     resolution:
@@ -695,15 +414,6 @@ packages:
     resolution:
       integrity: sha1-EkqohYmSYfaK7bQqfAgN6dpgh0M=
       tarball: fast-safe-stringify/download/fast-safe-stringify-2.0.7.tgz
-  /fill-range/7.0.1:
-    dependencies:
-      to-regex-range: 5.0.1
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha1-GRmmp8df44ssfHflGYU12prN2kA=
-      tarball: fill-range/download/fill-range-7.0.1.tgz
   /find-up/5.0.0:
     dependencies:
       locate-path: 6.0.0
@@ -732,19 +442,11 @@ packages:
     resolution:
       integrity: sha1-TxicRKoSO4lfcigE9V6iPq3DSOk=
       tarball: fs-extra/download/fs-extra-7.0.1.tgz
-  /fs.realpath/1.0.0:
+  /function-bind/1.1.1:
     dev: true
     resolution:
-      integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
-      tarball: fs.realpath/download/fs.realpath-1.0.0.tgz
-  /fsevents/2.3.2:
-    dev: true
-    engines:
-      node: ^8.16.0 || ^10.6.0 || >=11.0.0
-    optional: true
-    resolution:
-      integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=
-      tarball: fsevents/download/fsevents-2.3.2.tgz
+      integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=
+      tarball: function-bind/download/function-bind-1.1.1.tgz
   /get-caller-file/2.0.5:
     dev: false
     engines:
@@ -752,27 +454,6 @@ packages:
     resolution:
       integrity: sha1-T5RBKoLbMvNuOwuXQfipf+sDH34=
       tarball: get-caller-file/download/get-caller-file-2.0.5.tgz
-  /glob-parent/5.1.2:
-    dependencies:
-      is-glob: 4.0.1
-    dev: true
-    engines:
-      node: '>= 6'
-    resolution:
-      integrity: sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=
-      tarball: glob-parent/download/glob-parent-5.1.2.tgz
-  /glob/7.1.6:
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 3.0.4
-      once: 1.4.0
-      path-is-absolute: 1.0.1
-    dev: true
-    resolution:
-      integrity: sha1-FB8zuBp8JJLhJVlDB0gMRmeSeKY=
-      tarball: glob/download/glob-7.1.6.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fglob%2Fdownload%2Fglob-7.1.6.tgz
   /graceful-fs/4.2.6:
     dev: true
     resolution:
@@ -785,6 +466,15 @@ packages:
     resolution:
       integrity: sha1-lEdx/ZyByBJlxNaUGGDaBrtZR5s=
       tarball: has-flag/download/has-flag-4.0.0.tgz
+  /has/1.0.3:
+    dependencies:
+      function-bind: 1.1.1
+    dev: true
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=
+      tarball: has/download/has-1.0.3.tgz
   /import-lazy/4.0.0:
     dev: true
     engines:
@@ -792,35 +482,13 @@ packages:
     resolution:
       integrity: sha1-6OtidIOgpD2jwD8+NVSL5csMwVM=
       tarball: import-lazy/download/import-lazy-4.0.0.tgz
-  /inflight/1.0.6:
+  /is-core-module/2.2.0:
     dependencies:
-      once: 1.4.0
-      wrappy: 1.0.2
+      has: 1.0.3
     dev: true
     resolution:
-      integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=
-      tarball: inflight/download/inflight-1.0.6.tgz
-  /inherits/2.0.4:
-    dev: true
-    resolution:
-      integrity: sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=
-      tarball: inherits/download/inherits-2.0.4.tgz
-  /is-binary-path/2.1.0:
-    dependencies:
-      binary-extensions: 2.2.0
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=
-      tarball: is-binary-path/download/is-binary-path-2.1.0.tgz
-  /is-extglob/2.1.1:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=
-      tarball: is-extglob/download/is-extglob-2.1.1.tgz
+      integrity: sha1-lwN+89UiJNhRY/VZeytj2a/tmBo=
+      tarball: is-core-module/download/is-core-module-2.2.0.tgz
   /is-fullwidth-code-point/3.0.0:
     dev: false
     engines:
@@ -828,22 +496,6 @@ packages:
     resolution:
       integrity: sha1-8Rb4Bk/pCz94RKOJl8C3UFEmnx0=
       tarball: is-fullwidth-code-point/download/is-fullwidth-code-point-3.0.0.tgz
-  /is-glob/4.0.1:
-    dependencies:
-      is-extglob: 2.1.1
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-dWfb6fL14kZ7x3q4PEopSCQHpdw=
-      tarball: is-glob/download/is-glob-4.0.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fis-glob%2Fdownload%2Fis-glob-4.0.1.tgz
-  /is-number/7.0.0:
-    dev: true
-    engines:
-      node: '>=0.12.0'
-    resolution:
-      integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=
-      tarball: is-number/download/is-number-7.0.0.tgz
   /iterare/1.2.1:
     dev: true
     engines:
@@ -856,14 +508,6 @@ packages:
     resolution:
       integrity: sha1-o6vicYryQaKykE+EpiWXDzia4yo=
       tarball: jju/download/jju-1.4.0.tgz
-  /json5/1.0.1:
-    dependencies:
-      minimist: 1.2.5
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha1-d5+wAYYE+oVOrL9iUhgNg1Q+Pb4=
-      tarball: json5/download/json5-1.0.1.tgz
   /jsonfile/4.0.0:
     dev: true
     optionalDependencies:
@@ -904,28 +548,6 @@ packages:
     resolution:
       integrity: sha1-bW/mVw69lqr5D8rR2vo7JWbbOpQ=
       tarball: lru-cache/download/lru-cache-6.0.0.tgz
-  /make-error/1.3.6:
-    dev: true
-    resolution:
-      integrity: sha1-LrLjfqm2fEiR9oShOUeZr0hM96I=
-      tarball: make-error/download/make-error-1.3.6.tgz
-  /minimatch/3.0.4:
-    dependencies:
-      brace-expansion: 1.1.11
-    dev: true
-    resolution:
-      integrity: sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=
-      tarball: minimatch/download/minimatch-3.0.4.tgz
-  /minimist/1.2.5:
-    dev: true
-    resolution:
-      integrity: sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI=
-      tarball: minimist/download/minimist-1.2.5.tgz
-  /ms/2.1.2:
-    dev: true
-    resolution:
-      integrity: sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=
-      tarball: ms/download/ms-2.1.2.tgz?cache=0&sync_timestamp=1607436885760&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fms%2Fdownload%2Fms-2.1.2.tgz
   /node-fetch/2.6.1:
     dev: true
     engines:
@@ -933,20 +555,6 @@ packages:
     resolution:
       integrity: sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=
       tarball: node-fetch/download/node-fetch-2.6.1.tgz
-  /node-modules-regexp/1.0.0:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-jZ2+KJZKSsVxLpExZCEHxx6Q7EA=
-      tarball: node-modules-regexp/download/node-modules-regexp-1.0.0.tgz
-  /normalize-path/3.0.0:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=
-      tarball: normalize-path/download/normalize-path-3.0.0.tgz
   /object-hash/2.1.1:
     dev: true
     engines:
@@ -954,13 +562,6 @@ packages:
     resolution:
       integrity: sha1-lEfQJ5tPz4DP8yWb9modxzr6vgk=
       tarball: object-hash/download/object-hash-2.1.1.tgz
-  /once/1.4.0:
-    dependencies:
-      wrappy: 1.0.2
-    dev: true
-    resolution:
-      integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
-      tarball: once/download/once-1.4.0.tgz
   /p-limit/3.1.0:
     dependencies:
       yocto-queue: 0.1.0
@@ -986,13 +587,6 @@ packages:
     resolution:
       integrity: sha1-UTvb4tO5XXdi6METfvoZXGxhtbM=
       tarball: path-exists/download/path-exists-4.0.0.tgz
-  /path-is-absolute/1.0.1:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
-      tarball: path-is-absolute/download/path-is-absolute-1.0.1.tgz
   /path-parse/1.0.6:
     dev: true
     resolution:
@@ -1003,22 +597,6 @@ packages:
     resolution:
       integrity: sha1-+nh37LxJXGAZB1YiIkU8Q8wgSl8=
       tarball: path-to-regexp/download/path-to-regexp-3.2.0.tgz
-  /picomatch/2.2.2:
-    dev: true
-    engines:
-      node: '>=8.6'
-    resolution:
-      integrity: sha1-IfMz6ba46v8CRo9RRupAbTRfTa0=
-      tarball: picomatch/download/picomatch-2.2.2.tgz
-  /pirates/4.0.1:
-    dependencies:
-      node-modules-regexp: 1.0.0
-    dev: true
-    engines:
-      node: '>= 6'
-    resolution:
-      integrity: sha1-ZDqSyviUVm+RsrmG0sZpUKji+4c=
-      tarball: pirates/download/pirates-4.0.1.tgz
   /prettier/2.2.1:
     dev: true
     engines:
@@ -1027,15 +605,6 @@ packages:
     resolution:
       integrity: sha1-eVoaeN1S8HPaDNQrIfnJE4GSP/U=
       tarball: prettier/download/prettier-2.2.1.tgz?cache=0&sync_timestamp=1606999604265&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprettier%2Fdownload%2Fprettier-2.2.1.tgz
-  /readdirp/3.5.0:
-    dependencies:
-      picomatch: 2.2.2
-    dev: true
-    engines:
-      node: '>=8.10.0'
-    resolution:
-      integrity: sha1-m6dMAZsV02UnjS6Ru4xI17TULJ4=
-      tarball: readdirp/download/readdirp-3.5.0.tgz?cache=0&sync_timestamp=1615719701333&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freaddirp%2Fdownload%2Freaddirp-3.5.0.tgz
   /reflect-metadata/0.1.13:
     dev: true
     resolution:
@@ -1055,6 +624,14 @@ packages:
     resolution:
       integrity: sha1-sllBtUloIxzC0bt2p5y38sC/hEQ=
       tarball: resolve/download/resolve-1.17.0.tgz
+  /resolve/1.20.0:
+    dependencies:
+      is-core-module: 2.2.0
+      path-parse: 1.0.6
+    dev: true
+    resolution:
+      integrity: sha1-YpoBP7P3B1XW8LeTXMHCxTeLGXU=
+      tarball: resolve/download/resolve-1.20.0.tgz
   /rxjs/6.6.7:
     dependencies:
       tslib: 1.14.1
@@ -1064,11 +641,6 @@ packages:
     resolution:
       integrity: sha1-kKwBisq/SRv2UEQjXVhjxNq4BMk=
       tarball: rxjs/download/rxjs-6.6.7.tgz
-  /safe-buffer/5.1.2:
-    dev: true
-    resolution:
-      integrity: sha1-mR7GnSluAxN0fVm9/St0XDX4go0=
-      tarball: safe-buffer/download/safe-buffer-5.1.2.tgz
   /semver/7.3.5:
     dependencies:
       lru-cache: 6.0.0
@@ -1079,21 +651,6 @@ packages:
     resolution:
       integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=
       tarball: semver/download/semver-7.3.5.tgz
-  /slash/3.0.0:
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha1-ZTm+hwwWWtvVJAIg2+Nh8bxNRjQ=
-      tarball: slash/download/slash-3.0.0.tgz
-  /source-map-support/0.5.19:
-    dependencies:
-      buffer-from: 1.1.1
-      source-map: 0.6.1
-    dev: true
-    resolution:
-      integrity: sha1-qYti+G3K9PZzmWSMCFKRq56P7WE=
-      tarball: source-map-support/download/source-map-support-0.5.19.tgz
   /source-map/0.6.1:
     dev: true
     engines:
@@ -1101,13 +658,6 @@ packages:
     resolution:
       integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
       tarball: source-map/download/source-map-0.6.1.tgz
-  /source-map/0.7.3:
-    dev: true
-    engines:
-      node: '>= 8'
-    resolution:
-      integrity: sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=
-      tarball: source-map/download/source-map-0.7.3.tgz
   /sprintf-js/1.0.3:
     dev: true
     resolution:
@@ -1140,13 +690,6 @@ packages:
     resolution:
       integrity: sha1-CxVx3XZpzNTz4G4U7x7tJiJa5TI=
       tarball: strip-ansi/download/strip-ansi-6.0.0.tgz
-  /strip-bom/3.0.0:
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=
-      tarball: strip-bom/download/strip-bom-3.0.0.tgz
   /strip-json-comments/3.1.1:
     dev: true
     engines:
@@ -1168,43 +711,6 @@ packages:
     resolution:
       integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
       tarball: timsort/download/timsort-0.3.0.tgz
-  /to-regex-range/5.0.1:
-    dependencies:
-      is-number: 7.0.0
-    dev: true
-    engines:
-      node: '>=8.0'
-    resolution:
-      integrity: sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=
-      tarball: to-regex-range/download/to-regex-range-5.0.1.tgz
-  /ts-node/9.1.1_typescript@4.2.3:
-    dependencies:
-      arg: 4.1.3
-      create-require: 1.1.1
-      diff: 4.0.2
-      make-error: 1.3.6
-      source-map-support: 0.5.19
-      typescript: 4.2.3
-      yn: 3.1.1
-    dev: true
-    engines:
-      node: '>=10.0.0'
-    hasBin: true
-    peerDependencies:
-      typescript: '>=2.7'
-    resolution:
-      integrity: sha1-UamkUKPpWUAb2l8ASnLVS5NtN20=
-      tarball: ts-node/download/ts-node-9.1.1.tgz
-  /tsconfig-paths/3.9.0:
-    dependencies:
-      '@types/json5': 0.0.29
-      json5: 1.0.1
-      minimist: 1.2.5
-      strip-bom: 3.0.0
-    dev: true
-    resolution:
-      integrity: sha1-CYVHpsREiAfo/Ljq4IEGTumjyQs=
-      tarball: tsconfig-paths/download/tsconfig-paths-3.9.0.tgz
   /tslib/1.14.1:
     dev: true
     resolution:
@@ -1215,6 +721,18 @@ packages:
     resolution:
       integrity: sha1-2mCGDxwuyqVwOrfTm8Bba/mIuXo=
       tarball: tslib/download/tslib-2.1.0.tgz
+  /ttypescript/1.5.12_typescript@4.2.3:
+    dependencies:
+      resolve: 1.20.0
+      typescript: 4.2.3
+    dev: true
+    hasBin: true
+    peerDependencies:
+      ts-node: '>=8.0.2'
+      typescript: '>=3.2.2'
+    resolution:
+      integrity: sha1-J6g1bX1OcZ0Adaj+tN8UtSOE8EQ=
+      tarball: ttypescript/download/ttypescript-1.5.12.tgz
   /typescript/4.1.5:
     dev: true
     engines:
@@ -1262,11 +780,6 @@ packages:
     resolution:
       integrity: sha1-Z+FFz/UQpqaYS98RUpEdadLrnkM=
       tarball: wrap-ansi/download/wrap-ansi-7.0.0.tgz
-  /wrappy/1.0.2:
-    dev: true
-    resolution:
-      integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
-      tarball: wrappy/download/wrappy-1.0.2.tgz
   /y18n/5.0.5:
     dev: false
     engines:
@@ -1301,13 +814,6 @@ packages:
     resolution:
       integrity: sha1-HIK/D2tqZur85+8w43b0mhJHf2Y=
       tarball: yargs/download/yargs-16.2.0.tgz
-  /yn/3.1.1:
-    dev: true
-    engines:
-      node: '>=6'
-    resolution:
-      integrity: sha1-HodAGgnXZ8HV6rJqbkwYUYLS61A=
-      tarball: yn/download/yn-3.1.1.tgz
   /yocto-queue/0.1.0:
     dev: true
     engines:
