@@ -18,5 +18,6 @@ import esbuild from 'esbuild';
       'class-validator',
     ],
     keepNames: true,
+    sourcemap: true
   });
 })();

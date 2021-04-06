@@ -5,7 +5,9 @@
   ],
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "sourceMap": true,
+    "inlineSources": true
   },
   "references": [
     {

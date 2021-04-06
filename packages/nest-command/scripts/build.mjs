@@ -9,5 +9,6 @@ import { nodeExternalsPlugin } from 'esbuild-node-externals';
     outfile: 'dist/nest-command.js',
     keepNames: true,
     plugins: [nodeExternalsPlugin()],
+    sourcemap: true
   });
 })();
