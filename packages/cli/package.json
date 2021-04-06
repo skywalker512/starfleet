@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node scripts/build.mjs",
-    "dev": "swc src -d tmp -w"
+    "dev": "swc src -d tmp -w",
+    "start": "node -r tsconfig-paths/register -r @swc-node/register src/index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -14,11 +15,13 @@
     "@nestjs/common": "^7.6.15",
     "@nestjs/core": "^7.6.15",
     "@starfleet/nest-command": "workspace:*",
-    "esbuild": "^0.11.2",
-    "esbuild-node-externals": "^1.0.3",
-    "tslib": "^2.1.0",
+    "@swc-node/register": "^1.0.5",
     "@swc/cli": "^0.1.36",
     "@swc/core": "^1.2.51",
-    "chokidar": "^3.5.1"
+    "chokidar": "^3.5.1",
+    "esbuild": "^0.11.2",
+    "esbuild-node-externals": "^1.0.3",
+    "tsconfig-paths": "^3.9.0",
+    "tslib": "^2.1.0"
   }
 }

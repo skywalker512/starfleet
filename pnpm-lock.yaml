@@ -11,21 +11,25 @@ importers:
       '@nestjs/common': 7.6.15
       '@nestjs/core': 7.6.15_@nestjs+common@7.6.15
       '@starfleet/nest-command': link:../nest-command
+      '@swc-node/register': 1.0.5
       '@swc/cli': 0.1.36_@swc+core@1.2.51+chokidar@3.5.1
       '@swc/core': 1.2.51
       chokidar: 3.5.1
       esbuild: 0.11.2
       esbuild-node-externals: 1.0.3_esbuild@0.11.2
+      tsconfig-paths: 3.9.0
       tslib: 2.1.0
     specifiers:
       '@nestjs/common': ^7.6.15
       '@nestjs/core': ^7.6.15
       '@starfleet/nest-command': workspace:*
+      '@swc-node/register': ^1.0.5
       '@swc/cli': ^0.1.36
       '@swc/core': ^1.2.51
       chokidar: ^3.5.1
       esbuild: ^0.11.2
       esbuild-node-externals: ^1.0.3
+      tsconfig-paths: ^3.9.0
       tslib: ^2.1.0
   packages/nest-command:
     dependencies:
@@ -265,6 +269,33 @@ packages:
     resolution:
       integrity: sha1-Oqd89UTFcb4yBvwry6IMeglu0lQ=
       tarball: '@rushstack/ts-command-line/download/@rushstack/ts-command-line-4.7.8.tgz'
+  /@swc-node/core/1.3.0:
+    dependencies:
+      '@swc/core': 1.2.51
+    dev: true
+    engines:
+      node: '>= 10'
+    resolution:
+      integrity: sha1-MmCYq84/QrvKYyxXA1mc0f76XNs=
+      tarball: '@swc-node/core/download/@swc-node/core-1.3.0.tgz'
+  /@swc-node/register/1.0.5:
+    dependencies:
+      '@swc-node/core': 1.3.0
+      '@swc-node/sourcemap-support': 0.1.8
+      chalk: 4.1.0
+      debug: 4.3.1
+      pirates: 4.0.1
+    dev: true
+    resolution:
+      integrity: sha1-Tl8+b8Tz4rBWhRWv2uLaUaZ+3M8=
+      tarball: '@swc-node/register/download/@swc-node/register-1.0.5.tgz'
+  /@swc-node/sourcemap-support/0.1.8:
+    dependencies:
+      source-map-support: 0.5.19
+    dev: true
+    resolution:
+      integrity: sha1-jPdBda5eM3RhIBHn51wDY3AZ20w=
+      tarball: '@swc-node/sourcemap-support/download/@swc-node/sourcemap-support-0.1.8.tgz'
   /@swc/cli/0.1.36_@swc+core@1.2.51+chokidar@3.5.1:
     dependencies:
       '@swc/core': 1.2.51
@@ -384,6 +415,11 @@ packages:
     resolution:
       integrity: sha1-qB/YYG1IH4c6OADG665PHXaKVqk=
       tarball: '@types/argparse/download/@types/argparse-1.0.38.tgz'
+  /@types/json5/0.0.29:
+    dev: true
+    resolution:
+      integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+      tarball: '@types/json5/download/@types/json5-0.0.29.tgz'
   /@types/node/10.17.13:
     dev: true
     resolution:
@@ -581,6 +617,15 @@ packages:
     resolution:
       integrity: sha1-wdfo8eX2z8n/ZfnNNS03NIdWwzM=
       tarball: create-require/download/create-require-1.1.1.tgz
+  /debug/4.3.1:
+    dependencies:
+      ms: 2.1.2
+    dev: true
+    engines:
+      node: '>=6.0'
+    resolution:
+      integrity: sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
+      tarball: debug/download/debug-4.3.1.tgz
   /diff/4.0.2:
     dev: true
     engines:
@@ -811,6 +856,14 @@ packages:
     resolution:
       integrity: sha1-o6vicYryQaKykE+EpiWXDzia4yo=
       tarball: jju/download/jju-1.4.0.tgz
+  /json5/1.0.1:
+    dependencies:
+      minimist: 1.2.5
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha1-d5+wAYYE+oVOrL9iUhgNg1Q+Pb4=
+      tarball: json5/download/json5-1.0.1.tgz
   /jsonfile/4.0.0:
     dev: true
     optionalDependencies:
@@ -863,6 +916,16 @@ packages:
     resolution:
       integrity: sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=
       tarball: minimatch/download/minimatch-3.0.4.tgz
+  /minimist/1.2.5:
+    dev: true
+    resolution:
+      integrity: sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI=
+      tarball: minimist/download/minimist-1.2.5.tgz
+  /ms/2.1.2:
+    dev: true
+    resolution:
+      integrity: sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=
+      tarball: ms/download/ms-2.1.2.tgz?cache=0&sync_timestamp=1607436885760&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fms%2Fdownload%2Fms-2.1.2.tgz
   /node-fetch/2.6.1:
     dev: true
     engines:
@@ -870,6 +933,13 @@ packages:
     resolution:
       integrity: sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=
       tarball: node-fetch/download/node-fetch-2.6.1.tgz
+  /node-modules-regexp/1.0.0:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-jZ2+KJZKSsVxLpExZCEHxx6Q7EA=
+      tarball: node-modules-regexp/download/node-modules-regexp-1.0.0.tgz
   /normalize-path/3.0.0:
     dev: true
     engines:
@@ -940,6 +1010,15 @@ packages:
     resolution:
       integrity: sha1-IfMz6ba46v8CRo9RRupAbTRfTa0=
       tarball: picomatch/download/picomatch-2.2.2.tgz
+  /pirates/4.0.1:
+    dependencies:
+      node-modules-regexp: 1.0.0
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha1-ZDqSyviUVm+RsrmG0sZpUKji+4c=
+      tarball: pirates/download/pirates-4.0.1.tgz
   /prettier/2.2.1:
     dev: true
     engines:
@@ -1061,6 +1140,13 @@ packages:
     resolution:
       integrity: sha1-CxVx3XZpzNTz4G4U7x7tJiJa5TI=
       tarball: strip-ansi/download/strip-ansi-6.0.0.tgz
+  /strip-bom/3.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=
+      tarball: strip-bom/download/strip-bom-3.0.0.tgz
   /strip-json-comments/3.1.1:
     dev: true
     engines:
@@ -1109,6 +1195,16 @@ packages:
     resolution:
       integrity: sha1-UamkUKPpWUAb2l8ASnLVS5NtN20=
       tarball: ts-node/download/ts-node-9.1.1.tgz
+  /tsconfig-paths/3.9.0:
+    dependencies:
+      '@types/json5': 0.0.29
+      json5: 1.0.1
+      minimist: 1.2.5
+      strip-bom: 3.0.0
+    dev: true
+    resolution:
+      integrity: sha1-CYVHpsREiAfo/Ljq4IEGTumjyQs=
+      tarball: tsconfig-paths/download/tsconfig-paths-3.9.0.tgz
   /tslib/1.14.1:
     dev: true
     resolution:
