@@ -5,11 +5,13 @@ importers:
   .:
     specifiers:
       '@pnpm/meta-updater': ^0.0.0
+      pnpm: 6.0.1
       prettier: ^2.2.1
       syncpack: ^5.7.11
       typescript: 4.2.3
     devDependencies:
       '@pnpm/meta-updater': 0.0.0
+      pnpm: 6.0.1
       prettier: 2.2.1
       syncpack: 5.7.11
       typescript: 4.2.3
@@ -76,6 +78,7 @@ importers:
       is-subdir: ^1.1.1
       normalize-path: ^3.0.0
       path-exists: ^4.0.0
+      typescript: ^4.2.3
       write-json-file: ^4.3.0
     dependencies:
       '@pnpm/lockfile-file': 4.0.0_@pnpm+logger@4.0.0
@@ -85,6 +88,7 @@ importers:
       is-subdir: 1.2.0
       normalize-path: 3.0.0
       path-exists: 4.0.0
+      typescript: 4.2.3
       write-json-file: 4.3.0
 
 packages:
@@ -1337,6 +1341,12 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /pnpm/6.0.1:
+    resolution: {integrity: sha1-8SWuz6gBFS7T8VxymZp90PDXuYQ=, tarball: pnpm/download/pnpm-6.0.1.tgz}
+    engines: {node: '>=12.17'}
+    hasBin: true
+    dev: true
+
   /prettier/2.2.1:
     resolution: {integrity: sha1-eVoaeN1S8HPaDNQrIfnJE4GSP/U=, tarball: prettier/download/prettier-2.2.1.tgz}
     engines: {node: '>=10.13.0'}
@@ -1656,7 +1666,6 @@ packages:
     resolution: {integrity: sha1-OQYtgBmRLUNyYpjwlJPVmASMHOM=, tarball: typescript/download/typescript-4.2.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-4.2.3.tgz}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /unique-string/2.0.0:
     resolution: {integrity: sha1-OcZFH4GvsnSd4rIz4/fF6IQ72J0=, tarball: unique-string/download/unique-string-2.0.0.tgz}

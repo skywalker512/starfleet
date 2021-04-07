@@ -8,10 +8,14 @@
     "update-manifests": "pnpm --filter=@starfleet-private/updater compile && meta-updater ./utils/updater/lib/index.js",
     "update-deps": "pnpx syncpack format && pnpx syncpack fix-mismatches"
   },
+  "engines": {
+    "pnpm": "=6.0.1"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@pnpm/meta-updater": "^0.0.0",
+    "pnpm": "6.0.1",
     "prettier": "^2.2.1",
     "syncpack": "^5.7.11",
     "typescript": "4.2.3"
