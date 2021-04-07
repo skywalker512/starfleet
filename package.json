@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.2.1",
-    "typescript": "^4.2.3"
+    "syncpack": "^5.7.11",
+    "typescript": "4.2.3"
   }
 }
