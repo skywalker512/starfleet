@@ -1,0 +1,34 @@
+{
+  "name": "@starfleet/nest-dynamic",
+  "description": "",
+  "version": "1.0.0",
+  "author": "",
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.13.2",
+    "@nestjs/common": "^7.6.15",
+    "@nestjs/core": "^7.6.15",
+    "@types/node": "^14.14.37",
+    "esbuild": "^0.11.5",
+    "@starfleet/cli-new": "workspace:*",
+    "esbuild-node-externals": "^1.0.3",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.7",
+    "tslib": "^2.1.0",
+    "typescript": "^4.2.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "ISC",
+  "main": "dist/src/index.js",
+  "peerDependencies": {
+    "@nestjs/common": "^7.6.15",
+    "@nestjs/core": "^7.6.15"
+  },
+  "scripts": {
+    "deploy": "rm -rf dist && tsc -b && (node scripts/build.mjs & api-extractor run --local --verbose) && rm -rf ./dist/src ./dist/*.tsbuildinfo",
+    "dev": "tsc -b -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "dist/src/index.d.ts"
+}

@@ -1,11 +1,10 @@
 import { NestFactory } from '@nestjs/core';
 import { CommandModule } from '@starfleet/nest-command';
+import { DynamicImportModule } from '@starfleet/nest-dynamic'
 import { Module } from '@nestjs/common';
 
-import { NewModule } from './new';
-
 @Module({
-  imports: [CommandModule.forRoot({ cliName: 'sf' }), NewModule],
+  imports: [CommandModule.forRoot({ cliName: 'sf' }), DynamicImportModule.registerPluginsAsync()],
 })
 class AppModule {}
 

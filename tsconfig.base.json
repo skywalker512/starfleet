@@ -8,7 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "esnext",
+    "target": "ESNext",
     "module": "commonjs",
     "lib": ["esnext"],
     "skipLibCheck": true,
