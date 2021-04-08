@@ -1,0 +1,8 @@
+{
+  "name": "@starfleet-private/esbuild-alias",
+  "description": "",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "main": "src/index.mjs"
+}

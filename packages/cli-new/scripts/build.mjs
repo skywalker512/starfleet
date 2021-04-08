@@ -1,23 +1,5 @@
 import esbuild from 'esbuild';
-// import { nodeExternalsPlugin } from 'esbuild-node-externals';
-const alias = (options) => {
-  const aliases = Object.keys(options);
-  const re = new RegExp(`^${aliases.map(x => escapeRegExp(x)).join('|')}$`);
-
-  return {
-    name: 'alias',
-    setup(build) {
-      build.onResolve({ filter: re }, args => ({
-        path: options[args.path], external: true
-      }));
-    },
-  };
-}
-
-function escapeRegExp(string) {
-  // $& means the whole matched string
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
+import alias from '@starfleet-private/esbuild-alias'
 
 (async () => {
   await esbuild.build({
@@ -27,12 +9,7 @@ function escapeRegExp(string) {
     outfile: 'dist/cli-new.js',
     // minify: true,
     plugins: [
-      alias({
-        '@nestjs/common': '@starfleet/cli-common',
-        '@starfleet/nest-command': '@starfleet/cli-common',
-        '@nestjs/core': '@starfleet/cli-common',
-        'tslib': '@starfleet/cli-common',
-      }),
+      alias
     ],
     keepNames: true,
     sourcemap: true

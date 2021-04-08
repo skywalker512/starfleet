@@ -8,10 +8,9 @@
     "@nestjs/core": "^7.6.15",
     "@starfleet/nest-command": "workspace:*",
     "esbuild": "^0.11.5",
-    "patch-package": "^6.4.7",
+    "tslib": "^2.1.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.6.7",
-    "tslib": "^2.1.0"
+    "rxjs": "^6.6.7"
   },
   "license": "ISC",
   "main": "dist/index.js",
