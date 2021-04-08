@@ -1,4 +1,5 @@
 import { DynamicModule, Module } from '@nestjs/common';
+import importCwd from 'import-cwd';
 
 @Module({})
 export class DynamicImportModule {
@@ -30,12 +31,6 @@ export class DynamicImportModule {
   }
 
   private static async loadPlugin(pluginPath: string): Promise<DynamicModule> {
-    let plugin;
-    try {
-      plugin = require(pluginPath);
-    } catch (e) {
-      plugin = undefined;
-    }
-    return plugin;
+    return importCwd.silent(pluginPath) as DynamicModule;
   }
 }
