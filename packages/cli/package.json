@@ -6,8 +6,8 @@
   "devDependencies": {
     "@nestjs/common": "^7.6.15",
     "@nestjs/core": "^7.6.15",
-    "@starfleet/nest-command": "workspace:*",
     "@starfleet/cli-new": "workspace:*",
+    "@starfleet/nest-command": "workspace:*",
     "@starfleet/nest-dynamic": "workspace:*",
     "esbuild": "^0.11.5",
     "esbuild-node-externals": "^1.0.3",
