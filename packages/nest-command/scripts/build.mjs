@@ -3,7 +3,7 @@ import { nodeExternalsPlugin } from 'esbuild-node-externals';
 
 (async () => {
   await esbuild.build({
-    entryPoints: ['dist/lib/index.js'],
+    entryPoints: ['dist/src/index.js'],
     bundle: true,
     platform: 'node',
     outfile: 'dist/nest-command.js',

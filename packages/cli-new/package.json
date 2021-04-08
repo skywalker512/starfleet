@@ -15,9 +15,11 @@
     "typescript": "^4.2.3"
   },
   "license": "ISC",
-  "main": "dist/cli-new.js",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "deploy": "rm -rf dist && tsc -b && node scripts/build.mjs && rm -rf dist/src dist/*.tsbuildinfo",
+    "build": "rm -rf dist && tsc -b",
     "dev": " tsc -b -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   }

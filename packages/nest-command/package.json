@@ -24,7 +24,7 @@
     "dist"
   ],
   "license": "ISC",
-  "main": "dist/lib/index.js",
+  "main": "dist/src/index.js",
   "peerDependencies": {
     "@nestjs/common": "^7.6.15",
     "@nestjs/core": "^7.6.15"
@@ -34,5 +34,5 @@
     "dev": "tsc -b -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "types": "dist/lib/index.d.ts"
+  "types": "dist/src/index.d.ts"
 }
