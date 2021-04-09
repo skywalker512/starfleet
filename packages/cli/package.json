@@ -22,10 +22,14 @@
     "@starfleet-private/esbuild-alias": "workspace:*"
   },
   "license": "ISC",
-  "main": "index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "deploy": "rm -rf dist && tsc -b && node scripts/build.mjs && rm -rf dist/src dist/*.tsbuildinfo",
     "dev": " tsc -b -w",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "bin": "dist/starfleet.js",
+    "main": "dist/starfleet.js"
   }
 }

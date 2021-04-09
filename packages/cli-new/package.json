@@ -17,12 +17,16 @@
     "@starfleet-private/esbuild-alias": "workspace:*"
   },
   "license": "ISC",
-  "main": "dist/cli-new.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc -b",
     "deploy": "rm -rf dist && tsc -b && node scripts/build.mjs && rm -rf dist/src dist/*.tsbuildinfo",
     "dev": " tsc -b -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "types": "dist/src/index.d.ts"
+  "types": "dist/src/index.d.ts",
+  "publishConfig": {
+    "main": "dist/cli-new.js",
+    "types": "dist/cli-new.d.ts"
+  }
 }

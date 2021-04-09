@@ -134,6 +134,7 @@ importers:
       import-cwd: ^3.0.0
       reflect-metadata: ^0.1.13
       rxjs: ^6.6.7
+      tiny-glob: ^0.2.8
       tslib: ^2.1.0
       typescript: ^4.2.3
     devDependencies:
@@ -146,6 +147,7 @@ importers:
       import-cwd: 3.0.0
       reflect-metadata: 0.1.13
       rxjs: 6.6.7
+      tiny-glob: 0.2.8
       tslib: 2.1.0
       typescript: 4.2.3
 
@@ -1056,6 +1058,14 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
+  /globalyzer/0.1.0:
+    resolution: {integrity: sha1-y3baeVVWaaFRnVqO3wk6+qC/FGU=, tarball: globalyzer/download/globalyzer-0.1.0.tgz}
+    dev: true
+
+  /globrex/0.1.2:
+    resolution: {integrity: sha1-3V2eyCYjJzDNZ5Ol4zqTApheYJg=, tarball: globrex/download/globrex-0.1.2.tgz}
+    dev: true
+
   /graceful-fs/4.2.4:
     resolution: {integrity: sha1-Ila94U02MpWMRl68ltxGfKB6Kfs=, tarball: graceful-fs/download/graceful-fs-4.2.4.tgz}
     dev: true
@@ -1735,6 +1745,13 @@ packages:
 
   /timsort/0.3.0:
     resolution: {integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=, tarball: timsort/download/timsort-0.3.0.tgz}
+    dev: true
+
+  /tiny-glob/0.2.8:
+    resolution: {integrity: sha1-snksOWzGLbiR/6Fh/osz52Ej5TE=, tarball: tiny-glob/download/tiny-glob-0.2.8.tgz}
+    dependencies:
+      globalyzer: 0.1.0
+      globrex: 0.1.2
     dev: true
 
   /to-regex-range/5.0.1:

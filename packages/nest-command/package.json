@@ -34,5 +34,9 @@
     "dev": "tsc -b -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "types": "dist/src/index.d.ts"
+  "types": "dist/src/index.d.ts",
+  "publishConfig": {
+    "main": "dist/nest-command.js",
+    "types": "dist/nest-command.d.ts"
+  }
 }

@@ -1,16 +1,20 @@
 import { DynamicModule, Module } from '@nestjs/common';
 import importCwd from 'import-cwd';
+import glob from 'tiny-glob';
 
 @Module({})
 export class DynamicImportModule {
   public static async registerPluginsAsync(): Promise<DynamicModule> {
-    return this.loadPlugins();
+    return await this.loadPlugins();
   }
   public static pluginsArray: any[] = [];
 
-  private static loadPlugins() {
+  private static async loadPlugins() {
     const loadedPlugins: Array<Promise<DynamicModule>> = [];
-    ['@starfleet/cli-new'].forEach(filePath => {
+    let files = await glob('node_modules/@starfleet/cli-!(common)');
+    files = files.map(file => file.replace('node_modules/', ''))
+
+    files.forEach(filePath => {
       loadedPlugins.push(
         this.loadPlugin(filePath)
       );
