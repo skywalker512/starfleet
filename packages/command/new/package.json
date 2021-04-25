@@ -1,37 +1,33 @@
 {
-  "name": "cli",
+  "name": "@starfleet/command-new",
   "description": "",
   "version": "1.0.0",
   "author": "",
-  "dependencies": {
-    "@starfleet/cli-common": "workspace:*"
-  },
   "devDependencies": {
     "@nestjs/common": "^7.6.15",
     "@nestjs/core": "^7.6.15",
-    "@starfleet/command-new": "workspace:*",
     "@starfleet/nest-command": "workspace:*",
-    "@starfleet/nest-dynamic": "workspace:*",
     "esbuild": "^0.11.5",
     "esbuild-node-externals": "^1.0.3",
-    "esbuild-plugin-alias": "^0.1.2",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.6.7",
     "tslib": "^2.1.0",
     "typescript": "^4.2.3",
-    "@starfleet-private/esbuild-alias": "workspace:*",
-    "@starfleet/workspace": "workspace:*"
+    "@starfleet/cli-common": "workspace:*",
+    "@starfleet/workspace": "workspace:*",
+    "@starfleet-private/esbuild-alias": "workspace:*"
   },
   "license": "ISC",
   "main": "dist/src/index.js",
   "scripts": {
+    "build": "rm -rf dist && tsc -b",
     "deploy": "rm -rf dist && tsc -b && node scripts/build.mjs && rm -rf dist/src dist/*.tsbuildinfo",
     "dev": " tsc -b -w",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/src/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "types": "dist/src/index.d.ts",
   "publishConfig": {
-    "bin": "dist/starfleet.js",
-    "main": "dist/starfleet.js"
+    "main": "dist/cli-new.js",
+    "types": "dist/cli-new.d.ts"
   }
 }

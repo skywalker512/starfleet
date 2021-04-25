@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "update-manifests": "pnpm --filter=@starfleet-private/updater compile && meta-updater ./utils/updater/lib/index.js",
-    "update-deps": "pnpx syncpack format && pnpx syncpack fix-mismatches"
+    "update-deps": "pnpx syncpack format && pnpx syncpack fix-mismatches",
+    "dev": "tsc -b -w",
+    "clean": "pnpm -r exec -- rm -rf dist"
   },
   "engines": {
     "pnpm": "=6.0.1"

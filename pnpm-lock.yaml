@@ -22,9 +22,10 @@ importers:
       '@nestjs/core': ^7.6.15
       '@starfleet-private/esbuild-alias': workspace:*
       '@starfleet/cli-common': workspace:*
-      '@starfleet/cli-new': workspace:*
+      '@starfleet/command-new': workspace:*
       '@starfleet/nest-command': workspace:*
       '@starfleet/nest-dynamic': workspace:*
+      '@starfleet/workspace': workspace:*
       esbuild: ^0.11.5
       esbuild-node-externals: ^1.0.3
       esbuild-plugin-alias: ^0.1.2
@@ -32,14 +33,16 @@ importers:
       rxjs: ^6.6.7
       tslib: ^2.1.0
       typescript: ^4.2.3
+    dependencies:
+      '@starfleet/cli-common': link:../cli-comon
     devDependencies:
       '@nestjs/common': 7.6.15_8e6d4b7501d9d25f42cbf34563d4f5bc
       '@nestjs/core': 7.6.15_2ef5148cf119d2e6a2825daac1d64a18
       '@starfleet-private/esbuild-alias': link:../../utils/esbuild-alias
-      '@starfleet/cli-common': link:../cli-comon
-      '@starfleet/cli-new': link:../cli-new
+      '@starfleet/command-new': link:../command/new
       '@starfleet/nest-command': link:../nest-command
       '@starfleet/nest-dynamic': link:../nest-dynamic
+      '@starfleet/workspace': link:../workspace
       esbuild: 0.11.5
       esbuild-node-externals: 1.0.3_esbuild@0.11.5
       esbuild-plugin-alias: 0.1.2
@@ -66,13 +69,14 @@ importers:
       rxjs: 6.6.7
       tslib: 2.1.0
 
-  packages/cli-new:
+  packages/command/new:
     specifiers:
       '@nestjs/common': ^7.6.15
       '@nestjs/core': ^7.6.15
       '@starfleet-private/esbuild-alias': workspace:*
       '@starfleet/cli-common': workspace:*
       '@starfleet/nest-command': workspace:*
+      '@starfleet/workspace': workspace:*
       esbuild: ^0.11.5
       esbuild-node-externals: ^1.0.3
       reflect-metadata: ^0.1.13
@@ -82,9 +86,10 @@ importers:
     devDependencies:
       '@nestjs/common': 7.6.15_8e6d4b7501d9d25f42cbf34563d4f5bc
       '@nestjs/core': 7.6.15_2ef5148cf119d2e6a2825daac1d64a18
-      '@starfleet-private/esbuild-alias': link:../../utils/esbuild-alias
-      '@starfleet/cli-common': link:../cli-comon
-      '@starfleet/nest-command': link:../nest-command
+      '@starfleet-private/esbuild-alias': link:../../../utils/esbuild-alias
+      '@starfleet/cli-common': link:../../cli-comon
+      '@starfleet/nest-command': link:../../nest-command
+      '@starfleet/workspace': link:../../workspace
       esbuild: 0.11.5
       esbuild-node-externals: 1.0.3_esbuild@0.11.5
       reflect-metadata: 0.1.13
@@ -148,6 +153,34 @@ importers:
       reflect-metadata: 0.1.13
       rxjs: 6.6.7
       tiny-glob: 0.2.8
+      tslib: 2.1.0
+      typescript: 4.2.3
+
+  packages/workspace:
+    specifiers:
+      '@microsoft/api-extractor': ^7.13.2
+      '@nestjs/common': ^7.6.15
+      '@nestjs/core': ^7.6.15
+      '@starfleet-private/esbuild-alias': workspace:*
+      '@starfleet/cli-common': workspace:*
+      '@types/node': ^14.14.37
+      esbuild: ^0.11.5
+      esbuild-node-externals: ^1.0.3
+      reflect-metadata: ^0.1.13
+      rxjs: ^6.6.7
+      tslib: ^2.1.0
+      typescript: ^4.2.3
+    devDependencies:
+      '@microsoft/api-extractor': 7.13.2
+      '@nestjs/common': 7.6.15_8e6d4b7501d9d25f42cbf34563d4f5bc
+      '@nestjs/core': 7.6.15_2ef5148cf119d2e6a2825daac1d64a18
+      '@starfleet-private/esbuild-alias': link:../../utils/esbuild-alias
+      '@starfleet/cli-common': link:../cli-comon
+      '@types/node': 14.14.37
+      esbuild: 0.11.5
+      esbuild-node-externals: 1.0.3_esbuild@0.11.5
+      reflect-metadata: 0.1.13
+      rxjs: 6.6.7
       tslib: 2.1.0
       typescript: 4.2.3
 
@@ -958,7 +991,7 @@ packages:
     dev: true
 
   /fast-safe-stringify/1.1.13:
-    resolution: {integrity: sha1-oB6c2cnkkXFcmKdaQtXwu9EH/3Y=, tarball: fast-safe-stringify/download/fast-safe-stringify-1.1.13.tgz?cache=0&sync_timestamp=1602575988344&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffast-safe-stringify%2Fdownload%2Ffast-safe-stringify-1.1.13.tgz}
+    resolution: {integrity: sha1-oB6c2cnkkXFcmKdaQtXwu9EH/3Y=, tarball: fast-safe-stringify/download/fast-safe-stringify-1.1.13.tgz}
     dev: true
 
   /fast-safe-stringify/2.0.7:

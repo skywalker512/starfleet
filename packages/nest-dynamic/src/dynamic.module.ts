@@ -11,7 +11,8 @@ export class DynamicImportModule {
 
   private static async loadPlugins() {
     const loadedPlugins: Array<Promise<DynamicModule>> = [];
-    let files = await glob('node_modules/@starfleet/cli-!(common)');
+    // TODO: 第三方空间
+    let files = await glob('node_modules/@starfleet/command-*');
     files = files.map(file => file.replace('node_modules/', ''))
 
     files.forEach(filePath => {
@@ -35,6 +36,6 @@ export class DynamicImportModule {
   }
 
   private static async loadPlugin(pluginPath: string): Promise<DynamicModule> {
-    return importCwd.silent(pluginPath) as DynamicModule;
+    return importCwd(pluginPath) as DynamicModule;
   }
 }
