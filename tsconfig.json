@@ -6,13 +6,16 @@
       "path": "./packages/cli"
     },
     {
-      "path": "./packages/cli-new"
+      "path": "./packages/command/new"
     },
     {
       "path": "./packages/nest-command"
     },
     {
       "path": "./packages/nest-dynamic"
+    },
+    {
+      "path": "./packages/workspace"
     }
   ]
 }

@@ -1,7 +1,10 @@
 import { Module } from '@nestjs/common';
 import NewCommand from './new.command';
+import { A } from './a';
+
 
 @Module({
-  providers: [NewCommand],
+  imports: [],
+  providers: [NewCommand, A],
 })
 export class NewModule {}
