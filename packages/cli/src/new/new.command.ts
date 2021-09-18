@@ -4,6 +4,10 @@ import * as console from 'console';
 
 @Injectable()
 export default class NewCommand {
+  constructor() {
+  }
+
+
   @Command({
     command: 'new [name]',
     describe: 'Generate StarFleet Workspace',
@@ -21,11 +25,6 @@ export default class NewCommand {
     })
       name: string
   ) {
-    console.log(name);
-    // await this.userService.add({
-    //   username,
-    //   group,
-    //   saber,
-    // });
+    console.log(name)
   }
 }

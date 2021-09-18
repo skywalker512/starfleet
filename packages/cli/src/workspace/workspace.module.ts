@@ -1,4 +1,4 @@
-import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
+import { DynamicModule, Module, Provider } from '@nestjs/common';
 import { WorkspaceService } from './workspace.service';
 import { WORKSPACE_CONFIG, WORKSPACE_MODULE_OPTIONS } from './workspace.constants';
 import fs from 'fs';
@@ -6,14 +6,14 @@ import path from 'path';
 import { A } from './a';
 
 
-@Global()
 @Module({})
 export class WorkspaceModule {
   public static forRoot(): DynamicModule {
     return {
       exports: [WorkspaceService, WORKSPACE_CONFIG, WORKSPACE_MODULE_OPTIONS, A],
       module: WorkspaceModule,
-      providers: this.createProviders()
+      providers: this.createProviders(),
+      global: true
     };
   }
 
@@ -38,12 +38,12 @@ export class WorkspaceModule {
         ]
       },
       {
-        provide: A,
-        useClass: A
-      },
-      {
         provide: WorkspaceService,
         useClass: WorkspaceService
+      },
+      {
+        provide: A,
+        useClass: A
       }
     ];
   }

@@ -56,6 +56,7 @@ importers:
       '@nestjs/common': ^7.6.15
       '@nestjs/core': ^7.6.15
       '@starfleet/nest-command': workspace:*
+      '@starfleet/workspace': workspace:*
       esbuild: ^0.11.5
       reflect-metadata: ^0.1.13
       rxjs: ^6.6.7
@@ -64,6 +65,7 @@ importers:
       '@nestjs/common': 7.6.15_8e6d4b7501d9d25f42cbf34563d4f5bc
       '@nestjs/core': 7.6.15_2ef5148cf119d2e6a2825daac1d64a18
       '@starfleet/nest-command': link:../nest-command
+      '@starfleet/workspace': link:../workspace
       esbuild: 0.11.5
       reflect-metadata: 0.1.13
       rxjs: 6.6.7

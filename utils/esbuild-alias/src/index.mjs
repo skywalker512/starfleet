@@ -22,4 +22,5 @@ export default alias({
   '@starfleet/nest-command': '@starfleet/cli-common',
   '@nestjs/core': '@starfleet/cli-common',
   'tslib': '@starfleet/cli-common',
+  '@starfleet/workspace': '@starfleet/cli-common',
 })
